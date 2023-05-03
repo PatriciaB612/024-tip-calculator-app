@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <img src="images/logo.svg" class="logo" alt="splitter logo" />
+    <main>
+      <div class="container-all">
+        <div class="container-inputs">
+          <label for="bill-input">Bill</label>
+          <input
+            class="bill-input"
+            id="bill-input"
+            type="number"
+            placeholder="0"
+          />
+          <p>Select tip %</p>
+          <div class="tip-btns">
+            <button class="tip-btn" type="button">5%</button>
+            <button class="tip-btn" type="button">10%</button>
+            <button class="tip-btn" type="button">15%</button>
+            <button class="tip-btn" type="button">25%</button>
+            <button class="tip-btn" type="button">50%</button>
+            <button class="custom-btn" type="button">Custom</button>
+          </div>
+          <label for="people-number-input">Number of people</label>
+          <input
+            class="people-number-input"
+            id="people-number-input"
+            type="number"
+            placeholder="0"
+          />
+        </div>
+        <div class="container-results">
+          <div class="result">
+            <p>Tip amount <br /><span class="text-small"> / person</span></p>
+            <output>0.00</output>
+          </div>
+          <div class="result">
+            <p>Total <br /><span class="text-small"> / person</span></p>
+            <output>0.00</output>
+          </div>
+          <button class="reset-btn" type="reset">reset</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
