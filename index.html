@@ -26,12 +26,16 @@
           />
           <p>Select tip %</p>
           <div class="tip-btns">
-            <button class="tip-btn" type="button">5%</button>
-            <button class="tip-btn" type="button">10%</button>
-            <button class="tip-btn" type="button">15%</button>
-            <button class="tip-btn" type="button">25%</button>
-            <button class="tip-btn" type="button">50%</button>
-            <button class="custom-btn" type="button">Custom</button>
+            <button class="tip-btn" type="button" value="5">5%</button>
+            <button class="tip-btn" type="button" value="10">10%</button>
+            <button class="tip-btn" type="button" value="15">15%</button>
+            <button class="tip-btn" type="button" value="25">25%</button>
+            <button class="tip-btn" type="button" value="50">50%</button>
+            <input
+              class="custom-tip-input tip-btn"
+              type="number"
+              placeholder="Custom"
+            ></input>
           </div>
           <label for="people-number-input">Number of people</label>
           <input
@@ -44,11 +48,11 @@
         <div class="container-results">
           <div class="result">
             <p>Tip amount <br /><span class="text-small"> / person</span></p>
-            <output>0.00</output>
+            <output class="tip-per-person">$0.00</output>
           </div>
           <div class="result">
             <p>Total <br /><span class="text-small"> / person</span></p>
-            <output>0.00</output>
+            <output class="total-per-person">$0.00</output>
           </div>
           <button class="reset-btn" type="reset">reset</button>
         </div>

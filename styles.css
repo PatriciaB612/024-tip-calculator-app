@@ -56,16 +56,9 @@ button:focus {
   color: #00474b;
 }
 
-.custom-btn {
-  background-color: #f3f9fa;
-  color: #547878;
-}
-
-.custom-btn:hover,
-.custom-btn:focus,
-.custom-btn:active {
-  outline: 4px solid #9fe8df;
-  transform: scale(1);
+.active {
+  background-color: #9fe8df;
+  color: #00474b;
 }
 
 .reset-btn {
@@ -85,8 +78,6 @@ button:focus {
     margin-top: auto;
   }
 }
-
-/* Layout */
 
 .logo {
   max-width: 25%;
@@ -119,21 +110,24 @@ button:focus {
   }
 }
 
-.bill-input,
-.people-number-input {
+input {
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
   font: inherit;
   font-size: 1.5rem;
   color: #00474b;
   text-align: right;
   padding: 0.25em;
-  padding-left: 2em;
-  display: block;
   border: none;
   background-color: #f3f9fa;
   border-radius: 5px;
+}
+
+.bill-input,
+.people-number-input {
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  padding-left: 2em;
+  display: block;
   margin: 0.5em 0 1.5em;
 }
 
@@ -154,12 +148,29 @@ input:focus {
   background-image: url(images/icon-person.svg);
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .tip-btns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 1em;
   margin-bottom: 2em;
+}
+
+.custom-tip-input {
+  text-align: center;
+  background-color: #f3f9fa;
+}
+
+.custom-tip-input:hover,
+.custom-tip-input:focus {
+  outline: 4px solid #9fe8df;
+  background-color: transparent;
 }
 
 @media (min-width: 800px) {
@@ -199,7 +210,7 @@ output {
   .container-results {
     transform: scaleX(1);
     max-width: 413px;
-    padding: 3em;
+    padding: 2em;
     width: 50%;
   }
 
