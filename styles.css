@@ -137,7 +137,7 @@ input::placeholder {
 }
 
 input:focus {
-  outline: none;
+  outline: 3px solid #26c2ae;
 }
 
 .bill-input {
@@ -169,8 +169,20 @@ input[type='number']::-webkit-outer-spin-button {
 
 .custom-tip-input:hover,
 .custom-tip-input:focus {
-  outline: 4px solid #9fe8df;
+  outline: 3px solid #26c2ae;
   background-color: transparent;
+}
+
+.error-message {
+  color: #e17457;
+  float: right;
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .people-number-label::after {
+    right: 20%;
+  }
 }
 
 @media (min-width: 800px) {

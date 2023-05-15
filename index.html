@@ -19,10 +19,10 @@
         <div class="container-inputs">
           <label for="bill-input">Bill</label>
           <input
-            class="bill-input"
+            class="bill-input input"
             id="bill-input"
             type="number"
-            placeholder="0"
+            placeholder="0.00"
           />
           <p>Select tip %</p>
           <div class="tip-btns">
@@ -32,14 +32,15 @@
             <button class="tip-btn" type="button" value="25">25%</button>
             <button class="tip-btn" type="button" value="50">50%</button>
             <input
-              class="custom-tip-input tip-btn"
+              class="custom-tip-input tip-btn input"
               type="number"
               placeholder="Custom"
             ></input>
           </div>
           <label for="people-number-input">Number of people</label>
+          <label for="people-number-input" class="error-message">can't be zero</label>
           <input
-            class="people-number-input"
+            class="people-number-input input"
             id="people-number-input"
             type="number"
             placeholder="0"
