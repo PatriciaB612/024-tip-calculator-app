@@ -1,6 +1,7 @@
 const billInput = document.querySelector('.bill-input')
 const tipBtns = document.querySelectorAll('.tip-btn')
 const inputs = document.querySelectorAll('.input')
+const customTipInput = document.querySelector('.custom-tip-input')
 const peopleNumber = document.querySelector('.people-number-input')
 const tipPerPersonEl = document.querySelector('.tip-per-person')
 const totalPerPersonEl = document.querySelector('.total-per-person')
@@ -38,17 +39,6 @@ function renderAmounts(tip, total) {
   totalPerPersonEl.innerText = `$${total.toFixed(2)}`
 }
 
-resetBtn.addEventListener('click', function () {
-  billInput.value = ''
-  document.querySelector('.active').classList.remove('active')
-  customTipInput.value = ''
-  peopleNumber.value = ''
-  peopleNumber.style.outline = 'none'
-  errorMessage.style.display = 'none'
-  tipPerPersonEl.innerHTML = '$0.00'
-  totalPerPersonEl.innerHTML = '$0.00'
-})
-
 //run calculateTip() when 'enter' is pressed in any input
 
 inputs.forEach(function (input) {
@@ -63,4 +53,15 @@ inputs.forEach(function (input) {
       errorMessage.style.display = 'inline'
     }
   })
+})
+
+resetBtn.addEventListener('click', function () {
+  billInput.value = ''
+  document.querySelector('.active').classList.remove('active')
+  customTipInput.value = ''
+  peopleNumber.value = ''
+  peopleNumber.style.outline = 'none'
+  errorMessage.style.display = 'none'
+  tipPerPersonEl.innerHTML = '$0.00'
+  totalPerPersonEl.innerHTML = '$0.00'
 })
